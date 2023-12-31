@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Result</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    
+</head>
+<body>
+    <video id="background-video" loop muted autoplay>
+        <source src="/static/background_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="result-container content">
+        {% if result %}
+            <h2>Weather Result</h2>
+            <div class="weather-info">{{ result }}</div>
+        {% else %}
+            <div class="error-message">{{ result }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
